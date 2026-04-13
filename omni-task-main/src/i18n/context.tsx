@@ -3,13 +3,14 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import pl from './translations/pl.json'
 import en from './translations/en.json'
+import ua from './translations/ua.json'
 
-export type Locale = 'pl' | 'en'
+export type Locale = 'pl' | 'en' | 'ua'
 
 type TranslationValue = string | { [key: string]: TranslationValue }
 type Translations = typeof pl
 
-const translationsMap: Record<Locale, Translations> = { pl, en }
+const translationsMap: Record<Locale, Translations> = { pl, en, ua }
 
 interface LanguageContextType {
   locale: Locale

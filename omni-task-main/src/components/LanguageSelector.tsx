@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from 'react'
 const localeLabels: Record<string, { flag: string; label: string }> = {
   pl: { flag: '🇵🇱', label: 'PL' },
   en: { flag: '🇬🇧', label: 'EN' },
+  ua: { flag: '🇺🇦', label: 'UA' },
 }
 
 export default function LanguageSelector() {

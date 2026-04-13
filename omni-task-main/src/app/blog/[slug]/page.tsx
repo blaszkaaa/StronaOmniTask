@@ -119,15 +119,7 @@ export default function BlogArticlePage() {
 
       <div className="article-page">
         <div className="article-page__container">
-          {article.image && (
-            <div className="article-page__image">
-              <img
-                src={article.image}
-                alt={article.image_alt || title}
-                title={article.image_title || title}
-              />
-            </div>
-          )}
+          {/* article.image block removed per user request */}
           <div
             className="article-page__content"
             dangerouslySetInnerHTML={{ __html: content }}

@@ -5,7 +5,8 @@ const storage = new Storage({
   keyFilename: process.env.GCS_KEY_FILE,
 })
 
-const bucketName = process.env.GCS_BUCKET_NAME || 'twoj-projekt-zdjecia2'
+const bucketNameRaw = process.env.GCS_BUCKET_NAME || 'twoj-projekt-zdjecia2'
+const bucketName = bucketNameRaw.split('/')[0]
 const bucket = storage.bucket(bucketName)
 
 export async function uploadImage(
